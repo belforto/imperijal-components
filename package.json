@@ -1,7 +1,7 @@
 {
 	"name": "imperijal-components",
 	"private": true,
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Imperijal reusable React component packages (monorepo root — not published to npm)",
 	"scripts": {
 		"build": "pnpm -r --filter './packages/*' build",
