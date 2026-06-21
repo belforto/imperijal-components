@@ -1,0 +1,82 @@
+{
+	"name": "@imperijal/date-time-picker",
+	"version": "0.1.0",
+	"description": "Lumina-style date & time picker for React (outputs YYYY-MM-DDTHH:mm)",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./styles.css": "./src/styles.css"
+	},
+	"files": [
+		"dist",
+		"src/styles.css",
+		"README.md"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "pnpm build"
+	},
+	"keywords": [
+		"react",
+		"datetime",
+		"date-picker",
+		"time-picker",
+		"tailwind"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/YOUR_ORG/imperijal-components.git",
+		"directory": "packages/date-time-picker"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"peerDependencies": {
+		"@radix-ui/react-collapsible": "^1.1.0",
+		"@radix-ui/react-popover": "^1.1.0",
+		"@radix-ui/react-slot": "^1.1.0",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"date-fns": "^4.0.0",
+		"lucide-react": ">=0.400.0",
+		"react": "^18 || ^19",
+		"react-day-picker": "^9.0.0",
+		"react-dom": "^18 || ^19",
+		"tailwind-merge": "^2.0.0 || ^3.0.0"
+	},
+	"devDependencies": {
+		"@radix-ui/react-collapsible": "^1.1.11",
+		"@radix-ui/react-popover": "^1.1.14",
+		"@radix-ui/react-slot": "^1.2.3",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"date-fns": "^4.1.0",
+		"lucide-react": "^0.511.0",
+		"react": "^19.0.0",
+		"react-day-picker": "^9.7.0",
+		"react-dom": "^19.0.0",
+		"tailwind-merge": "^3.0.0",
+		"tsup": "^8.5.0",
+		"typescript": "^5.8.0"
+	}
+}

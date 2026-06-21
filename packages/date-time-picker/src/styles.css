@@ -1,0 +1,19 @@
+/**
+ * Optional theme tokens for apps that don't already use shadcn-style CSS variables.
+ * Import in your global CSS: @import '@imperijal/date-time-picker/styles.css';
+ */
+.imperijal-date-time-picker {
+	--background: #ffffff;
+	--foreground: #0b1c30;
+	--popover: #ffffff;
+	--popover-foreground: #0b1c30;
+	--primary: #004ac6;
+	--primary-foreground: #ffffff;
+	--secondary: #5c5f61;
+	--muted-foreground: #737686;
+	--accent: #eff4ff;
+	--accent-foreground: #0b1c30;
+	--border: #c3c6d7;
+	--input: #c3c6d7;
+	--ring: #2563eb;
+}
