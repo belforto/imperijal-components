@@ -1,13 +1,14 @@
 {
 	"name": "imperijal-components",
-	"private": false,
+	"private": true,
 	"version": "0.0.0",
-	"description": "Imperijal reusable React component packages",
+	"description": "Imperijal reusable React component packages (monorepo root — not published to npm)",
 	"scripts": {
 		"build": "pnpm -r build",
 		"dev": "pnpm -r dev",
 		"lint": "pnpm -r lint",
-		"typecheck": "pnpm -r typecheck"
+		"typecheck": "pnpm -r typecheck",
+		"publish:date-time-picker": "pnpm --filter @imperijal/date-time-picker publish --access public --no-git-checks"
 	},
 	"keywords": [
 		"react",
