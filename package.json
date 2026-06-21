@@ -1,6 +1,6 @@
 {
 	"name": "imperijal-components",
-	"private": true,
+	"private": false,
 	"version": "0.0.0",
 	"description": "Imperijal reusable React component packages (monorepo root — not published to npm)",
 	"scripts": {
