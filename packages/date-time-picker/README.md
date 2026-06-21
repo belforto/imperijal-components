@@ -2,6 +2,14 @@
 
 Lumina-style date & time picker for React. Outputs **`YYYY-MM-DDTHH:mm`** (same as HTML `datetime-local`).
 
+![DateTimePicker demo](https://raw.githubusercontent.com/belforto/imperijal-components/main/apps/demo/demo.png)
+
+## Live demo
+
+After deploying `apps/demo` (see [DEMO.md](../DEMO.md)):
+
+**https://YOUR_DEMO_URL.vercel.app**
+
 ## Install
 
 ```bash
@@ -64,6 +72,12 @@ Your app needs shadcn-style CSS variables (`--primary`, `--border`, etc.) or imp
 | `size` | `'default' \| 'sm'` | `'default'` |
 | `timeSlots` | `{ startHour?, endHour?, intervalMinutes? }` | 5–24h, 30 min |
 | `disabled` | `boolean` | `false` |
+| `className` | `string` | — | Tailwind classes on **trigger button** |
+| `popoverClassName` | `string` | — | Tailwind classes on **popover panel** |
+| `contentClassName` | `string` | — | Tailwind classes on **inner content** |
+| `align` | `'start' \| 'center' \| 'end'` | `'start'` |
+
+See [CUSTOMIZATION.md](../../CUSTOMIZATION.md) for Tailwind setup and theming.
 
 ## Exports
 

@@ -1,6 +1,6 @@
 {
 	"name": "@imperijal/date-time-picker",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Lumina-style date & time picker for React (outputs YYYY-MM-DDTHH:mm)",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -43,9 +43,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/YOUR_ORG/imperijal-components.git",
+		"url": "https://github.com/belforto/imperijal-components.git",
 		"directory": "packages/date-time-picker"
 	},
+	"homepage": "https://github.com/belforto/imperijal-components#readme",
 	"publishConfig": {
 		"access": "public"
 	},

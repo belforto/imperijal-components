@@ -20,7 +20,12 @@ export type DateTimePickerProps = {
 	onChange: (value: string) => void;
 	placeholder?: string;
 	disabled?: boolean;
+	/** Tailwind classes on the trigger button */
 	className?: string;
+	/** Tailwind classes on the popover panel wrapper */
+	popoverClassName?: string;
+	/** Tailwind classes on the inner picker content */
+	contentClassName?: string;
 	id?: string;
 	size?: 'default' | 'sm';
 	timeSlots?: TimeSlotConfig;
@@ -33,6 +38,8 @@ export function DateTimePicker({
 	placeholder = 'Select date & time',
 	disabled = false,
 	className,
+	popoverClassName,
+	contentClassName,
 	id,
 	size = 'default',
 	timeSlots,
@@ -73,19 +80,24 @@ export function DateTimePicker({
 			</PopoverTrigger>
 			<PopoverContent
 				align={align}
-				className="w-[min(calc(100vw-2rem),28rem)] p-4"
+				className={cn(
+					'w-[min(calc(100vw-2rem),28rem)] p-4',
+					popoverClassName,
+				)}
 				onOpenAutoFocus={(e) => e.preventDefault()}
 			>
 				<div className="mb-4 flex items-center gap-2 border-b border-border/60 pb-3">
 					<ClockIcon className="size-5 text-primary" />
 					<h3 className="text-sm font-semibold">Select Date &amp; Time</h3>
 				</div>
-				<DateTimePickerContent
-					value={value}
-					open={open}
-					onConfirm={handleConfirm}
-					timeSlots={timeSlots}
-				/>
+				<div className={contentClassName}>
+					<DateTimePickerContent
+						value={value}
+						open={open}
+						onConfirm={handleConfirm}
+						timeSlots={timeSlots}
+					/>
+				</div>
 			</PopoverContent>
 		</Popover>
 	);

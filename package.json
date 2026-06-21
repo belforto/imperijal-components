@@ -1,20 +1,18 @@
 {
 	"name": "imperijal-components",
-	"private": false,
+	"private": true,
 	"version": "0.0.0",
 	"description": "Imperijal reusable React component packages (monorepo root — not published to npm)",
 	"scripts": {
-		"build": "pnpm -r build",
-		"dev": "pnpm -r dev",
-		"lint": "pnpm -r lint",
+		"build": "pnpm -r --filter './packages/*' build",
+		"dev": "pnpm --filter @imperijal/date-time-picker dev",
+		"demo": "pnpm --filter @imperijal/demo dev",
+		"demo:poll": "CHOKIDAR_USEPOLLING=true pnpm --filter @imperijal/demo dev",
+		"demo:build": "pnpm --filter @imperijal/demo build",
+		"demo:preview": "pnpm --filter @imperijal/demo preview",
 		"typecheck": "pnpm -r typecheck",
 		"publish:date-time-picker": "pnpm --filter @imperijal/date-time-picker publish --access public --no-git-checks"
 	},
-	"keywords": [
-		"react",
-		"components",
-		"ui"
-	],
 	"license": "MIT",
 	"packageManager": "pnpm@9.15.0",
 	"engines": {

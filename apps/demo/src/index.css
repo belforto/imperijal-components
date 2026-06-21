@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+@import 'react-day-picker/style.css';
+@import '../../../packages/date-time-picker/src/styles.css';
+
+@source "../../../packages/date-time-picker/src/**/*.tsx";
+@source "./**/*.tsx";
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--radius-md: 0.5rem;
+	--radius-xl: 0.75rem;
+}
+
+@layer base {
+	* {
+		border-color: var(--border);
+	}
+	body {
+		@apply min-h-screen text-foreground antialiased;
+		background-color: #f8f9ff;
+		background-image:
+			radial-gradient(
+				ellipse 80% 50% at 20% -10%,
+				color-mix(in srgb, var(--primary) 18%, transparent),
+				transparent
+			),
+			radial-gradient(
+				ellipse 60% 45% at 100% 0%,
+				color-mix(in srgb, #6366f1 14%, transparent),
+				transparent
+			),
+			radial-gradient(
+				ellipse 70% 50% at 50% 100%,
+				color-mix(in srgb, var(--primary) 10%, #dce9ff),
+				#f8f9ff
+			);
+		background-attachment: fixed;
+	}
+}
