@@ -1,6 +1,6 @@
 {
 	"name": "imperijal-components",
-	"private": true,
+	"private": false,
 	"version": "0.0.0",
 	"description": "Imperijal reusable React component packages",
 	"scripts": {
@@ -9,7 +9,11 @@
 		"lint": "pnpm -r lint",
 		"typecheck": "pnpm -r typecheck"
 	},
-	"keywords": ["react", "components", "ui"],
+	"keywords": [
+		"react",
+		"components",
+		"ui"
+	],
 	"license": "MIT",
 	"packageManager": "pnpm@9.15.0",
 	"engines": {
